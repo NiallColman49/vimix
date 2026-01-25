@@ -1,0 +1,941 @@
+<!doctype html>
+<html class="overflow-x-hidden" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vimix</title>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./src/assets/images/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./src/assets/images/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./src/assets/images/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./site.webmanifest" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@300;350&display=swap"
+            rel="stylesheet"
+        />
+        <link href="./src/styles/output.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="absolute inset-0 w-full z-50 h-max">
+            <div
+                class="flex items-center justify-between h-20 w-full border-b border-white/30"
+            >
+                <div class="pl-6">
+                    <img
+                        src="./src/assets/images/logos/vimix-logo.svg"
+                        alt="Vimix Logo"
+                        loading="eager"
+                        class="max-w-[158px]"
+                    />
+                </div>
+
+                <div class="flex items-center self-stretch lg:pr-12">
+                    <div class="hidden lg:block">
+                        <ul class="text-white flex items-center gap-x-10 pr-12">
+                            <li>
+                                <a href="/about" class="font-light">About</a>
+                            </li>
+                            <li>
+                                <a href="/culture" class="font-light"
+                                    >Our Culture</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/brands" class="font-light">Brands</a>
+                            </li>
+                            <li>
+                                <a href="/news" class="font-light">News</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="pr-6 lg:pr-0 pl-6 lg:pl-12 border-l border-white/30 self-stretch flex items-center"
+                    >
+                        <a
+                            href="mailto:hello@vimix.co.uk"
+                            target="_self"
+                            class="font-light"
+                            >Contact</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section
+            class="relative min-h-screen pb-[200px] lg:pb-[456px] overflow-hidden"
+        >
+            <!-- Video Background -->
+            <video
+                class="absolute inset-0 w-full h-full object-cover z-0"
+                autoplay
+                muted
+                loop
+                playsinline
+                poster="./src/assets/images/general/hero-video-placeholder.png"
+            >
+                <source src="./src/assets/videos/hero-video.mp4" type="video/mp4" />
+            </video>
+
+            <div class="absolute inset-0 w-full h-full bg-black/20"></div>
+
+            <!-- Content Overlay -->
+            <div class="relative z-10 flex flex-col min-h-screen pt-20">
+                <div class="w-full h-max pl-6 pr-2">
+                    <h1
+                        class="text-white mt-5 lg:max-w-1/2"
+                        data-split-text
+                        data-split-auto
+                        data-split-stagger="0.08"
+                    >
+                        This is your opportunity.
+                    </h1>
+                </div>
+
+                <div
+                    class="w-full flex flex-wrap lg:justify-between mt-10 lg:mt-42 xl:mt-52 2xl:mt-66.75 flex-1"
+                >
+                    <div
+                        class="flex items-end order-2 lg:order-1 mt-10 lg:mt-0 pl-6 pr-2 pb-9 w-full lg:w-2/3"
+                    >
+                        <a href="" target="_self" class="btn-primary">
+                            <span class="btn-text text-sm block mr-10">
+                                Discover More
+                            </span>
+
+                            <div
+                                class="btn-arrow bg-white h-[54px] w-10 flex justify-center items-center text-black"
+                            >
+                                →
+                            </div>
+                        </a>
+                    </div>
+
+                    <div
+                        class="w-full max-w-[450px] lg:max-w-full lg:w-1/3 text-white order-1 lg:order-2 pl-6 pr-2 pb-9 flex flex-col lg:justify-end"
+                    >
+                        <p
+                            data-split-text
+                            data-split-auto
+                            data-split-stagger="0.03"
+                        >
+                            From early-career training to advanced technical
+                            skills, we help people progress and help employers
+                            find the talent to move their industries forward.
+                        </p>
+
+                        <p
+                            class="mt-4 lg:mt-6"
+                            data-split-text
+                            data-split-auto
+                            data-split-stagger="0.03"
+                        >
+                            Together, we create the pathways that power
+                            possibility for individuals, organisations and
+                            society as a whole.
+                        </p>
+                    </div>
+
+                    <div
+                        class="flex w-full justify-end order-3 border-t border-white/30"
+                    >
+                        <div
+                            class="w-full lg:w-1/2 lg:border-l lg:border-white/30 pt-6 pl-6 lg:pl-3"
+                        >
+                            <div class="text-white flex flex-col gap-y-2">
+                                <span class="font-light"> Explore </span>
+
+                                <span> ↓ </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opportunity Measured In Outcomes -->
+        <section id="statistics-section">
+            <div class="flex w-full -mt-[200px] lg:-mt-[456px] relative z-10">
+                <div
+                    class="w-1/2 h-[200px] lg:h-[456px] bg-white rounded-tr-[400px] overflow-hidden"
+                ></div>
+
+                <div
+                    class="absolute left-1/2 bg-white/30 w-px z-10 h-[456px] hidden lg:block"
+                ></div>
+
+                <div
+                    class="w-1/2 h-[200px] lg:h-[456px] bg-white rounded-tl-[400px] overflow-hidden"
+                ></div>
+            </div>
+            <div class="bg-white pt-6 lg:pt-10 px-6 w-full">
+                <div class="relative">
+                    <h2
+                        class="font-light text-5xl lg:text-[91px] 2xl:text-[138px] lg:leading-[110%] relative text-center"
+                    >
+                        <span class="block relative">
+                            <span class="lg:whitespace-nowrap"
+                                >Opportunity, measured</span
+                            >
+                            <img
+                                src="./src/assets/images/icons/arrow.svg"
+                                alt="Arrow"
+                                class="absolute -top-8 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-3.5"
+                            />
+                        </span>
+                        <span class="block">in outcomes.</span>
+                    </h2>
+
+                    <div
+                        class="mt-6 min-[1780px]:mt-0 min-[1780px]:absolute bottom-6 right-0 w-full max-w-md ml-auto"
+                    >
+                        <p
+                            class="lg:text-lg"
+                            data-split-text
+                            data-split-stagger="0.03"
+                        >
+                            We don't just talk about impact. We prove it. Every
+                            learner trained, every business supported and every
+                            partnership formed is another step towards a more
+                            skilled, more socially mobile workforce.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pt-20 lg:pt-[140px]">
+                    <div class="flex justify-center">
+                        <img
+                            src="./src/assets/images/icons/arrow.svg"
+                            alt="Arrow"
+                            class="w-4 h-3.5"
+                        />
+                    </div>
+
+                    <div class="flex flex-col gap-y-6 relative mt-4 lg:mt-0">
+                        <h2
+                            class="font-light text-7xl sm:text-[138px] lg:text-[220px] 2xl:text-[308px] lg:leading-[110%] relative text-center lg:text-left"
+                            data-counter
+                            data-target="10000"
+                        >
+                            10,000
+                        </h2>
+
+                        <p
+                            class="w-full max-w-[350px] xl:absolute text-center lg:text-left right-0 bottom-0 2xl:bottom-12 mx-auto sm:ml-auto"
+                        >
+                            Individuals trained annually across digital,
+                            technical and leadership disciplines.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pt-6 lg:pt-10">
+                    <div class="flex flex-col gap-y-6 relative mt-4 lg:mt-0">
+                        <p
+                            class="w-full xl:absolute text-center lg:text-left left-0 bottom-0 2xl:bottom-12 mx-auto sm:mr-auto order-2 xl:order-1 lg:pl-[240px] xl:pl-0"
+                        >
+                            Apprentices achieved distinction
+                        </p>
+
+                        <h2
+                            class="font-light text-7xl sm:text-[138px] lg:text-[220px] 2xl:text-[308px] lg:leading-[110%] relative text-center lg:text-right"
+                            data-counter
+                            data-target="8900"
+                            data-suffix="+"
+                        >
+                            8,900+
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pinned stat section - small enough to fit viewport -->
+        <section
+            id="pinned-stat-section"
+            class="bg-white px-6 pb-20 lg:pb-40 relative"
+        >
+            <div class="relative pt-6 lg:pt-10">
+                <div class="flex flex-col gap-y-6 relative mt-4 lg:mt-0">
+                    <h2
+                        class="font-light text-7xl sm:text-[138px] lg:text-[220px] 2xl:text-[308px] lg:leading-[110%] relative text-center lg:text-left"
+                        data-counter
+                        data-target="4000"
+                    >
+                        4,000
+                    </h2>
+
+                    <p
+                        class="w-full max-w-[350px] xl:absolute text-center lg:text-left right-0 bottom-0 2xl:bottom-12 mx-auto sm:ml-auto"
+                    >
+                        Employers connected to new talent pipelines via
+                        government funded upskilling
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overlay content - scrolls over pinned statistics -->
+        <div id="overlay-content" class="relative z-20 bg-white">
+            <!-- Corner brackets -->
+            <div
+                class="absolute w-2.5 h-2.5 pointer-events-none z-30 top-4 left-4 lg:top-6 lg:left-6 border-t border-l border-vimix-black"
+            ></div>
+            <div
+                class="absolute w-2.5 h-2.5 pointer-events-none z-30 top-4 right-4 lg:top-6 lg:right-6 border-t border-r border-vimix-black"
+            ></div>
+
+            <!-- See our impact in action. -->
+            <section class="px-6">
+                <div class="flex justify-center pt-20 lg:pt-40">
+                    <img
+                        src="./src/assets/images/icons/arrow.svg"
+                        alt="Arrow"
+                        class="w-4 h-3.5"
+                    />
+                </div>
+                <div class="pt-20 lg:pt-40">
+                    <div class="grid grid-cols-12">
+                        <div
+                            class="col-span-12 lg:col-span-6 xl:col-span-5 lg:col-start-7 xl:col-start-8"
+                        >
+                            <div
+                                class="float-left mr-4 lg:mr-8 flex items-center gap-x-2 pt-px lg:pt-2.5"
+                            >
+                                <span
+                                    class="w-1.5 h-1.5 bg-vimix-black flex-shrink-0"
+                                ></span>
+                                <span class="text-sm whitespace-nowrap"
+                                    >See our impact in action.</span
+                                >
+                            </div>
+                            <h2
+                                class="text-2xl lg:text-4xl font-medium leading-[1.15]"
+                                data-split-text
+                                data-split-stagger="0.05"
+                            >
+                                Across the Vimix Group, opportunity takes many
+                                forms. A partnership that fuels innovation, an
+                                acquisition that widens our reach, or a
+                                programme that gives someone their first real
+                                chance.
+                            </h2>
+                            <div class="clear-both"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Carousel -->
+            <section class="overflow-x-clip overflow-y-visible">
+                <div class="flex justify-center py-20 lg:py-40">
+                    <img
+                        src="./src/assets/images/icons/arrow.svg"
+                        alt="Arrow"
+                        class="w-4 h-3.5"
+                    />
+                </div>
+
+                <div class="overflow-hidden max-w-[100vw]">
+                    <div class="swiper carousel-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="relative h-full">
+                                    <img
+                                        src="./src/assets/images/carousel/carousel-1.jpg"
+                                        alt="Social Mobility"
+                                        class="w-full h-full object-cover"
+                                    />
+                                    <div
+                                        class="absolute bottom-6 left-6 right-6 min-h-[344px] max-w-[450px] p-6 bg-black/20 backdrop-blur-xl flex flex-col justify-between"
+                                    >
+                                        <div>
+                                            <div class="mb-6">
+                                                <img
+                                                    src="./src/assets/images/icons/stacked-circles-icon.svg"
+                                                    alt=""
+                                                    class="w-6 h-6"
+                                                />
+                                            </div>
+                                            <h3
+                                                class="text-white text-2xl lg:text-5xl font-light lg:leading-[110%]"
+                                            >
+                                                Social<br />
+                                                Mobility
+                                            </h3>
+                                        </div>
+                                        <p
+                                            class="text-white text-sm lg:text-base lg:pr-12"
+                                        >
+                                            By opening doors to education and
+                                            career pathways for all backgrounds,
+                                            we're driving real change and
+                                            creating equal opportunities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="relative h-full">
+                                    <img
+                                        src="./src/assets/images/carousel/carousel-2.jpg"
+                                        alt="Tech & AI"
+                                        class="w-full h-full object-cover"
+                                    />
+                                    <div
+                                        class="absolute bottom-6 left-6 right-6 min-h-[344px] max-w-[450px] p-6 bg-black/20 backdrop-blur-xl flex flex-col justify-between"
+                                    >
+                                        <div>
+                                            <div class="mb-6">
+                                                <img
+                                                    src="./src/assets/images/icons/grouped-arrows-icon.svg"
+                                                    alt=""
+                                                    class="w-6 h-6"
+                                                />
+                                            </div>
+                                            <h3
+                                                class="text-white text-2xl lg:text-5xl font-light lg:leading-[110%]"
+                                            >
+                                                Tech <br />& AI
+                                            </h3>
+                                        </div>
+                                        <p
+                                            class="text-white text-sm lg:text-base lg:pr-12"
+                                        >
+                                            We empower businesses and
+                                            individuals with cutting-edge
+                                            digital and AI skills, ensuring they
+                                            stay ahead in a rapidly evolving
+                                            tech landscape.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="relative h-full">
+                                    <img
+                                        src="./src/assets/images/carousel/carousel-3.jpg"
+                                        alt="Workforce Culture"
+                                        class="w-full h-full object-cover"
+                                    />
+                                    <div
+                                        class="absolute bottom-6 left-6 right-6 min-h-[344px] max-w-[450px] p-6 bg-black/20 backdrop-blur-xl flex flex-col justify-between"
+                                    >
+                                        <div>
+                                            <div class="mb-6">
+                                                <img
+                                                    src="./src/assets/images/icons/three-arrows-icon.svg"
+                                                    alt=""
+                                                    class="w-6 h-6"
+                                                />
+                                            </div>
+                                            <h3
+                                                class="text-white text-2xl lg:text-5xl font-light lg:leading-[110%]"
+                                            >
+                                                Workforce <br />Culture
+                                            </h3>
+                                        </div>
+                                        <p
+                                            class="text-white text-sm lg:text-base lg:pr-12"
+                                        >
+                                            We help businesses build inclusive,
+                                            high-performing teams through
+                                            leadership development and cultural
+                                            transformation programmes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="relative h-full">
+                                    <img
+                                        src="./src/assets/images/carousel/carousel-4.jpg"
+                                        alt="Global Reach"
+                                        class="w-full h-full object-cover"
+                                    />
+                                    <div
+                                        class="absolute bottom-6 left-6 right-6 min-h-[344px] max-w-[450px] p-6 bg-black/20 backdrop-blur-xl flex flex-col justify-between"
+                                    >
+                                        <div>
+                                            <div class="mb-6">
+                                                <img
+                                                    src="./src/assets/images/icons/outline-circle-icon.svg"
+                                                    alt=""
+                                                    class="w-6 h-6"
+                                                />
+                                            </div>
+                                            <h3
+                                                class="text-white text-2xl lg:text-5xl font-light lg:leading-[110%]"
+                                            >
+                                                Global <br />Reach
+                                            </h3>
+                                        </div>
+                                        <p
+                                            class="text-white text-sm lg:text-base lg:pr-12"
+                                        >
+                                            Our network spans industries and
+                                            borders, connecting talent and
+                                            organisations worldwide to create
+                                            opportunities without limits.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="relative h-full">
+                                    <img
+                                        src="./src/assets/images/carousel/carousel-5.jpg"
+                                        alt="Entrepreneurship"
+                                        class="w-full h-full object-cover"
+                                    />
+                                    <div
+                                        class="absolute bottom-6 left-6 right-6 min-h-[344px] max-w-[450px] p-6 bg-black/20 backdrop-blur-xl flex flex-col justify-between"
+                                    >
+                                        <div>
+                                            <div class="mb-6">
+                                                <img
+                                                    src="./src/assets/images/icons/solid-circle-icon.svg"
+                                                    alt=""
+                                                    class="w-6 h-6"
+                                                />
+                                            </div>
+                                            <h3
+                                                class="text-white text-2xl lg:text-5xl font-light lg:leading-[110%]"
+                                            >
+                                                Entrepreneurship
+                                            </h3>
+                                        </div>
+                                        <p
+                                            class="text-white text-sm lg:text-base lg:pr-12"
+                                        >
+                                            Our M&A strategy accelerates
+                                            innovation and impact by scaling
+                                            start-ups, expanding capabilities
+                                            and creating a unified ecosystem
+                                            that shares best practices.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="relative h-full">
+                                    <img
+                                        src="./src/assets/images/carousel/carousel-6.jpg"
+                                        alt="Supporting Businesses"
+                                        class="w-full h-full object-cover"
+                                    />
+                                    <div
+                                        class="absolute bottom-6 left-6 right-6 min-h-[344px] max-w-[450px] p-6 bg-black/20 backdrop-blur-xl flex flex-col justify-between"
+                                    >
+                                        <div>
+                                            <div class="mb-6">
+                                                <img
+                                                    src="./src/assets/images/icons/stacked-circles-icon.svg"
+                                                    alt=""
+                                                    class="w-6 h-6"
+                                                />
+                                            </div>
+                                            <h3
+                                                class="text-white text-2xl lg:text-5xl font-light lg:leading-[110%]"
+                                            >
+                                                Supporting <br />Businesses
+                                            </h3>
+                                        </div>
+                                        <p
+                                            class="text-white text-sm lg:text-base lg:pr-12"
+                                        >
+                                            From recruitment to upskilling and
+                                            strategic workforce planning, we
+                                            deliver tailored solutions that fuel
+                                            sustainable growth.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center pt-20 lg:pt-40">
+                    <img
+                        src="./src/assets/images/icons/arrow.svg"
+                        alt="Arrow"
+                        class="w-4 h-3.5"
+                    />
+                </div>
+            </section>
+        </div>
+
+        <!-- Five brands. One shared mission. -->
+        <section class="py-20 xl:py-[240px] px-6">
+            <div class="flex items-center flex-col xl:flex-row gap-10 xl:gap-6">
+                <div
+                    class="w-full xl:w-1/3 flex justify-center xl:justify-start"
+                >
+                    <h2
+                        class="text-center xl:text-left text-3xl xl:text-[60px] xl:leading-[120%] max-w-[390px]"
+                        data-split-text
+                        data-split-stagger="0.08"
+                    >
+                        Five brands.<br />One shared mission.
+                    </h2>
+                </div>
+
+                <div
+                    id="brand-cards-container"
+                    class="w-full xl:w-1/3 flex justify-center relative h-[330px] sm:h-[380px] xl:h-[550px] 2xl:h-[700px]"
+                >
+                    <div
+                        class="brand-card absolute top-0 left-1/2 -translate-x-1/2 z-[2] scale-100 origin-top overflow-hidden w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] xl:w-[450px] xl:h-[450px] 2xl:w-[606px] 2xl:h-[606px]"
+                        data-card="0"
+                    >
+                        <img
+                            src="./src/assets/images/general/apprentify.jpg"
+                            alt="Apprentify"
+                            class="pointer-events-none w-full h-full object-cover object-center"
+                        />
+                    </div>
+
+                    <div
+                        class="brand-card absolute top-6 lg:top-8 2xl:top-10 left-1/2 -translate-x-1/2 z-[1] scale-[0.96] origin-top overflow-hidden w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] xl:w-[450px] xl:h-[450px] 2xl:w-[606px] 2xl:h-[606px]"
+                        data-card="1"
+                    >
+                        <img
+                            src="./src/assets/images/general/ioda.jpg"
+                            alt="Ioda"
+                            class="pointer-events-none w-full h-full object-cover object-center"
+                        />
+                    </div>
+
+                    <div
+                        class="brand-card absolute top-12 lg:top-16 2xl:top-20 left-1/2 -translate-x-1/2 z-0 scale-[0.92] origin-top overflow-hidden w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] xl:w-[450px] xl:h-[450px] 2xl:w-[606px] 2xl:h-[606px]"
+                        data-card="2"
+                    >
+                        <img
+                            src="./src/assets/images/general/the-juice-academy.jpg"
+                            alt="The Juice Academy"
+                            class="pointer-events-none w-full h-full object-cover object-center"
+                        />
+                    </div>
+                </div>
+
+                <div class="w-full xl:w-1/3 flex justify-center xljustify-end">
+                    <p
+                        class="xl:text-lg max-w-[390px] text-center xl:text-left xl:pl-6"
+                    >
+                        Each specialist. Each distinct. All united by one
+                        purpose. Creating opportunity that moves people forward.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Badges Of Honour -->
+        <section class="px-6">
+            <div
+                class="px-10 xl:px-[60px] pb-10 lg:pb-20 xl:pb-0 pt-20 xl:pt-0 bg-[linear-gradient(241.93deg,#060637_66.59%,#022184_108.25%)] relative"
+            >
+                <div class="bg-white h-1.5 w-1.5 absolute top-6 left-6"></div>
+                <div class="bg-white h-1.5 w-1.5 absolute top-6 right-6"></div>
+                <div
+                    class="bg-white h-1.5 w-1.5 absolute bottom-6 left-6"
+                ></div>
+                <div
+                    class="bg-white h-1.5 w-1.5 absolute bottom-6 right-6"
+                ></div>
+
+                <div class="grid grid-cols-2 xl:grid-cols-3 relative">
+                    <div
+                        class="col-span-2 lg:col-span-1 h-full flex items-center pb-6 sm:pb-10 xl:pb-0"
+                    >
+                        <div class="bg-white h-1.5 w-1.5 mr-3"></div>
+                        <span class="text-white">Our badges of honour.</span>
+                    </div>
+
+                    <div class="col-span-2 text-white lg:pr-20">
+                        <div
+                            class="py-10 xl:py-[90px] grid sm:grid-cols-[1fr_auto] items-center gap-x-12"
+                        >
+                            <h3
+                                class="text-3xl lg:text-[60px] lg:leading-[120%] opacity-20 hover:opacity-100 max-w-[520px]"
+                            >
+                                Isp-accredited provider.
+                            </h3>
+                            <div
+                                class="w-[180px] lg:w-[228px] justify-self-center hidden sm:flex items-center justify-center"
+                            >
+                                <img
+                                    src="./src/assets/images/logos/isp-logo.svg"
+                                    alt="ISP Accredited Provider"
+                                    class="hidden sm:block max-w-[200px] lg:max-w-[270px] max-h-[140px] lg:max-h-[228px] object-center object-contain w-full h-full"
+                                />
+                            </div>
+                        </div>
+
+                        <div
+                            class="py-10 xl:py-[90px] grid grid-cols-[1fr_auto] items-center gap-x-12"
+                        >
+                            <h3
+                                class="text-3xl lg:text-[60px] lg:leading-[120%] opacity-100 max-w-[520px]"
+                            >
+                                The Sunday times top 100 2025.
+                            </h3>
+                            <div
+                                class="w-[180px] lg:w-[228px] justify-self-center hidden sm:flex items-center justify-center"
+                            >
+                                <img
+                                    src="./src/assets/images/logos/sunday-times-logo.png"
+                                    alt="The Sunday Times Top 100"
+                                    class="hidden sm:block max-w-[200px] lg:max-w-[270px] max-h-[140px] lg:max-h-[228px] object-center object-contain w-full h-full mix-blend-lighten"
+                                />
+                            </div>
+                        </div>
+
+                        <div
+                            class="py-10 xl:py-[90px] grid grid-cols-[1fr_auto] items-center gap-x-12"
+                        >
+                            <h3
+                                class="text-3xl lg:text-[60px] lg:leading-[120%] opacity-20 hover:opacity-100 max-w-[520px]"
+                            >
+                                Outstanding rating from ofsted.
+                            </h3>
+                            <div
+                                class="w-[180px] lg:w-[228px] justify-self-center hidden sm:flex items-center justify-center"
+                            >
+                                <img
+                                    src="./src/assets/images/logos/ofsted-logo.svg"
+                                    alt="Ofsted Outstanding"
+                                    class="hidden sm:block max-w-[200px] lg:max-w-[270px] max-h-[140px] lg:max-h-[228px] object-center object-contain w-full h-full"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News -->
+        <section class="px-6">
+            <div class="pt-20 lg:pt-40 pb-20">
+                <div class="grid grid-cols-6 lg:grid-cols-12">
+                    <div class="col-span-6 lg:col-span-5">
+                        <div
+                            class="float-left mr-4 lg:mr-8 flex items-center gap-x-2 pt-px lg:pt-2.5"
+                        >
+                            <span
+                                class="w-1.5 h-1.5 bg-vimix-black flex-shrink-0"
+                            ></span>
+                            <span class="text-sm whitespace-nowrap"
+                                >Latest News</span
+                            >
+                        </div>
+                        <h2
+                            class="text-2xl lg:text-4xl font-medium leading-[1.15]"
+                            data-split-text
+                            data-split-stagger="0.05"
+                        >
+                            From new partnerships to national initiatives, our
+                            story never stands still. See how Vimix and our
+                            brands are shaping the future of skills, careers and
+                            opportunity.
+                        </h2>
+                        <div class="clear-both"></div>
+
+                        <div class="mt-6 lg:mt-10 w-max">
+                            <a href="" target="_self" class="btn-primary-dark">
+                                <span class="btn-text text-sm block mr-10">
+                                    See All News
+                                </span>
+
+                                <div
+                                    class="btn-arrow bg-white h-[54px] w-10 flex justify-center items-center text-vimix-dark-blue"
+                                >
+                                    →
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-span-6 lg:p-3 lg:col-start-7 mt-10 lg:mt-0 max-w-full sm:max-w-3/4 md:max-w-1/2 lg:max-w-full"
+                    >
+                        <div class="flex w-full flex-wrap mt-6 lg:mt-0">
+                            <div
+                                class="w-full xl:w-1/2 h-[270px] overflow-hidden relative group"
+                                data-news-card
+                            >
+                                <img
+                                    src="./src/assets/images/general/apprentify-group.jpg"
+                                    alt="Apprentify Group"
+                                    class="w-full h-full object-center object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                                />
+                                <div
+                                    class="news-card-pill absolute px-4 py-2 bg-white/80 backdrop-blur-xl rounded-sm text-vimix-black text-sm whitespace-nowrap pointer-events-none opacity-0 z-10"
+                                >
+                                    Read More
+                                </div>
+                            </div>
+
+                            <div
+                                class="w-full xl:w-1/2 xl:h-[270px] flex flex-col justify-between xl:pl-6 mt-6 xl:mt-0"
+                            >
+                                <div
+                                    class="flex flex-wrap items-center gap-x-6 text-vimix-grey"
+                                >
+                                    <span>Technology</span>
+                                    <span>Apprentify</span>
+                                    <span>13.11.25</span>
+                                </div>
+                                <p class="lg:text-xl mt-4 xl:mt-0">
+                                    Apprentify Group named UK's 30th fastest
+                                    growing private company in Sunday Times...
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex w-full flex-wrap mt-6">
+                            <div
+                                class="w-full xl:w-1/2 h-[270px] overflow-hidden relative group"
+                                data-news-card
+                            >
+                                <img
+                                    src="./src/assets/images/general/apprentify-group-2.jpg"
+                                    alt="Apprentify Group"
+                                    class="w-full h-full object-center object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                                />
+                                <div
+                                    class="news-card-pill absolute px-4 py-2 bg-white/80 backdrop-blur-xl rounded-sm text-vimix-black text-sm whitespace-nowrap pointer-events-none opacity-0 z-10"
+                                >
+                                    Read More
+                                </div>
+                            </div>
+
+                            <div
+                                class="w-full xl:w-1/2 xl:h-[270px] flex flex-col justify-between xl:pl-6 mt-6 xl:mt-0"
+                            >
+                                <div
+                                    class="flex flex-wrap items-center gap-x-6 text-vimix-grey"
+                                >
+                                    <span>Technology</span>
+                                    <span>Apprentify</span>
+                                    <span>13.11.25</span>
+                                </div>
+                                <p class="lg:text-xl mt-4 lg:mt-0">
+                                    Apprentify Group named in top 50 fastest
+                                    growing Northern businesses
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex w-full flex-wrap mt-6">
+                            <div
+                                class="w-full xl:w-1/2 h-[270px] overflow-hidden relative group"
+                                data-news-card
+                            >
+                                <img
+                                    src="./src/assets/images/general/apprentify-group-3.jpg"
+                                    alt="Apprentify Group"
+                                    class="w-full h-full object-center object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                                />
+                                <div
+                                    class="news-card-pill absolute px-4 py-2 bg-white/80 backdrop-blur-xl rounded-sm text-vimix-black text-sm whitespace-nowrap pointer-events-none opacity-0 z-10"
+                                >
+                                    Read More
+                                </div>
+                            </div>
+
+                            <div
+                                class="w-full xl:w-1/2 xl:h-[270px] flex flex-col justify-between xl:pl-6 mt-6 xl:mt-0"
+                            >
+                                <div
+                                    class="flex flex-wrap items-center gap-x-6 text-vimix-grey"
+                                >
+                                    <span>Technology</span>
+                                    <span>Apprentify</span>
+                                    <span>13.11.25</span>
+                                </div>
+                                <p class="lg:text-xl mt-4 xl:mt-0">
+                                    Apprentify hosts panel at 2025 Labour Party
+                                    Conference; leaders place apprenticeships at
+                                    heart of economic growth
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="relative py-6">
+            <img
+                src="./src/assets/images/general/footer-background.jpg"
+                alt="Background Pattern"
+                class="absolute inset-0 w-full h-full object-cover -z-1"
+            />
+
+            <div class="px-6">
+                <div class="flex flex-wrap gap-6 justify-between pb-6">
+                    <img
+                        src="./src/assets/images/logos/vimix-logo.svg"
+                        alt="Vimix Logo"
+                    />
+
+                    <div
+                        class="mt-2 sm:mt-0 w-full sm:w-auto flex flex-col sm:flex-row sm:items-center gap-y-2 gap-x-6 lg:gap-x-12 text-white font-light"
+                    >
+                        <span>Privacy Policy</span>
+                        <span>Terms & Conditions</span>
+                        <span>Copyright</span>
+                    </div>
+                </div>
+
+                <div class="w-full z-1 pt-6 border-t border-white/30">
+                    <div id="footer-pattern" class="w-full h-full"></div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="/src/js/animations/carouselSwiper.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+        <script src="/src/js/animations/buttonAnimation.js"></script>
+        <script src="/src/js/animations/brandCardsDraggable.js"></script>
+        <script src="/src/js/animations/footerPatternAnimation.js"></script>
+        <script src="/src/js/main.js"></script>
+        <script src="/src/js/animations/scrollOverlapAnimation.js"></script>
+        <script src="/src/js/animations/numberCounterAnimation.js"></script>
+        <script src="/src/js/animations/textSplitAnimation.js"></script>
+        <script src="/src/js/animations/newsCardHoverPill.js"></script>
+    </body>
+</html>
