@@ -1001,6 +1001,11 @@
       align-items: center;
     }
   }
+  .sm\:px-10 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 10);
+    }
+  }
   .sm\:pb-10 {
     @media (width >= 40rem) {
       padding-bottom: calc(var(--spacing) * 10);
