@@ -1407,6 +1407,11 @@
       flex-direction: row;
     }
   }
+  .xl\:justify-end {
+    @media (width >= 80rem) {
+      justify-content: flex-end;
+    }
+  }
   .xl\:justify-start {
     @media (width >= 80rem) {
       justify-content: flex-start;
