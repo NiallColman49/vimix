@@ -2,11 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const pinnedStatSection = document.getElementById('pinned-stat-section');
     const overlayContent = document.getElementById('overlay-content');
 
-    if (!pinnedStatSection || !overlayContent) {
-        console.warn('Scroll overlap: Required elements not found');
-        return;
-    }
-
     ScrollTrigger.create({
         trigger: pinnedStatSection,
         start: 'top top',
