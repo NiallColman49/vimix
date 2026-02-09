@@ -1,5 +1,3 @@
-gsap.registerPlugin(Draggable);
-
 const brandCards = document.querySelectorAll('.brand-card');
 let highestZ = 3;
 
