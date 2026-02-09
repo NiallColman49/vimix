@@ -24,10 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     );
-
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => ScrollTrigger.refresh(), 250);
-    });
 });
