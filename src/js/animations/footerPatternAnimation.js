@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!container) return;
 
     const response = await fetch('./src/assets/images/patterns/pattern.svg');
-    const svgText = await response.text();
-    container.innerHTML = svgText;
+    container.innerHTML = await response.text();
 
     const svg = container.querySelector('svg');
     if (!svg) return;
@@ -13,49 +12,45 @@ document.addEventListener('DOMContentLoaded', async () => {
     svg.setAttribute('height', '100%');
     svg.style.display = 'block';
 
-    function updateViewBox() {
-        const width = window.innerWidth;
-        if (width < 640) {
-            svg.setAttribute('viewBox', '0 0 624 154');
-        } else if (width < 1024) {
-            svg.setAttribute('viewBox', '0 0 936 154');
-        } else {
-            svg.setAttribute('viewBox', '0 0 1872 154');
+    gsap.matchMedia().add(
+        {
+            mobile: '(max-width: 639px)',
+            tablet: '(min-width: 640px) and (max-width: 1023px)',
+            desktop: '(min-width: 1024px)',
+        },
+        (context) => {
+            const { mobile, tablet } = context.conditions;
+            if (mobile) {
+                svg.setAttribute('viewBox', '0 0 624 154');
+            } else if (tablet) {
+                svg.setAttribute('viewBox', '0 0 936 154');
+            } else {
+                svg.setAttribute('viewBox', '0 0 1872 154');
+            }
         }
+    );
+
+    const paths = Array.from(svg.querySelectorAll('path'));
+
+    function getRandomSubset() {
+        const shuffled = gsap.utils.shuffle([...paths]);
+        const count = Math.floor(paths.length * 0.15);
+        return shuffled.slice(0, count);
     }
 
-    updateViewBox();
-    window.addEventListener('resize', updateViewBox);
-
-    const paths = svg.querySelectorAll('path');
-
     function animateRandomPaths() {
-        const pathArray = Array.from(paths);
-        const shuffled = pathArray.sort(() => Math.random() - 0.5);
-        const subset = shuffled.slice(0, Math.floor(paths.length * 0.15));
+        const subset = getRandomSubset();
 
-        gsap.to(subset, {
-            opacity: 0.3,
-            duration: 0.8,
-            stagger: {
-                each: 0.02,
-                from: 'random',
-            },
-            ease: 'power2.inOut',
-            onComplete: () => {
-                gsap.to(subset, {
-                    opacity: 1,
-                    duration: 0.8,
-                    stagger: {
-                        each: 0.02,
-                        from: 'random',
-                    },
-                    ease: 'power2.inOut',
-                });
-            },
-        });
+        gsap.timeline({ onComplete: animateRandomPaths, delay: 0.2 })
+            .to(subset, {
+                opacity: 0.3,
+                duration: 0.8,
+                stagger: { each: 0.02, from: 'random' },
+                ease: 'power2.inOut',
+                yoyo: true,
+                repeat: 1,
+            });
     }
 
     animateRandomPaths();
-    setInterval(animateRandomPaths, 2000);
 });
